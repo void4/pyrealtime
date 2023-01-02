@@ -1,5 +1,4 @@
 import pygame
-from time import sleep
 
 pygame.init()
 pygame.display.set_caption("my title")
@@ -7,6 +6,7 @@ pygame.display.set_caption("my title")
 w = 640
 h = 480
 
+clock = pygame.time.Clock()
 screen = pygame.display.set_mode((w,h))
 
 fontcache = {}
@@ -44,4 +44,4 @@ while running:
 	print(pygame.key.get_pressed()[pygame.K_UP])
 
 	pygame.display.flip()
-	sleep(0.1)
+	clock.tick(60)
